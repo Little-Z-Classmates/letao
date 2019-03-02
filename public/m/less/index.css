@@ -1,136 +1,143 @@
-/* 定义一个公共主体颜色变量 */
-body {
-  /* Mui默认是17px */
-  font-size: .14rem;
-}
 html {
-  font-size: 26.66667vw;
+  font-size: 26.6667vw;
+  height: 100%;
 }
-* {
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
-  padding: 0;
+}
+body {
+  font-size: .14rem;
+  height: 100%;
+  padding: .45rem 0;
 }
 img {
-  /* 解决图片和块级元素3px间隙问题 */
   vertical-align: middle;
 }
-/* 实现头部 中间 底部的上中下布局 给body设置 flex布局 让头部和底部高度固定 中间flex1 自适应 */
-body {
-  display: flex;
-  /* 设置flex主轴方向是垂直 */
-  flex-direction: column;
-  /* 推荐使用100vh 不需要给父元素html设置高度 自然和页面一样高 */
-  height: 100vh;
+li {
+  list-style: none;
 }
-/* 头部区域的公共样式 */
 #header {
-  /* 需要固定在头部 使用固定定位 */
-  /* position: fixed;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    z-index: 999; */
-  height: .45rem;
+  background: #006699;
   display: flex;
-  background-color: #006699;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
 }
 #header .left {
-  width: .45rem;
-  height: .45rem;
+  width: 0.45rem;
+  height: 0.45rem;
 }
 #header .center {
   flex: 1;
   text-align: center;
+}
+#header .center h4 {
   line-height: .45rem;
-  /* MUi设置的默认margin要去掉 */
-  margin: 0;
-  color: #fff;
   font-weight: normal;
 }
 #header .right {
-  width: .45rem;
-  height: .45rem;
-  text-align: center;
-  line-height: .45rem;
-  color: #fff;
+  width: 0.45rem;
+  height: 0.45rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#main {
-  flex: 1;
-  overflow: hidden;
+#header .right i {
+  font-size: .20rem;
 }
-/* 底部区域的公共样式 */
 #footer {
-  /*   position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999; */
   background-color: #006699;
   height: .45rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  z-index: 100;
 }
 #footer a {
-  display: block;
-  text-align: center;
   color: #fff;
-  padding: .085rem 0;
-  /* 因为默认MUi设置了行高是21px 导致文字垂直间距有点大 不能居中 把行高设置成和字体大小一样 */
-  line-height: .14rem;
 }
-#footer a span {
-  display: block;
+#footer .mui-row {
+  height: 100%;
 }
-#footer a.active {
-  color: orange;
+#footer .mui-row > div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-body {
-  background-color: #fff;
+#footer .mui-row > div a {
+  margin-top: 0.04rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-/* 导航区域样式 */
-#nav {
+#main {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+#main .nav {
   padding: .1rem;
 }
-#nav a {
+#main .nav .mui-row a {
   display: block;
 }
-#nav a img {
+#main .nav .mui-row a img {
   width: 100%;
 }
-/* 广告区域 */
-#banner {
-  padding: 0 .1rem;
-}
-#banner .left a {
-  /* 因为a里面有图片图片默认是行内块 之间有缝隙会到掉下来 转成flex 里面子元素都是块级元素 */
+#main .banner {
   display: flex;
-}
-#banner .left a img {
-  width: 50%;
-  /* 高度固定 左边是右边高度的1半 */
-  height: 1.2rem;
-}
-#banner .right a {
-  display: block;
-}
-#banner .right a img {
-  width: 100%;
+  padding: 0 .1rem;
   height: 2.4rem;
 }
-/* 品牌专区  并集选择器当样式都一样的时候可以使用并集选择器 */
-#brand,
-#sprot,
-#woman,
-#man {
-  padding: .1rem;
+#main .banner .leftBanner {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
 }
-#brand a,
-#sprot a,
-#woman a,
-#man a {
+#main .banner .leftBanner > a {
+  height: 1.2rem;
+  width: 100%;
+}
+#main .banner .leftBanner > a img {
+  height: 100%;
+  width: 50%;
+  float: left;
+}
+#main .banner .rightBanner {
+  flex: 1;
+}
+#main .banner .rightBanner a {
+  display: block;
+  height: 100%;
+}
+#main .banner .rightBanner a img {
+  width: 100%;
+  height: 100%;
+}
+#main .brand,
+#main .sport,
+#main .women,
+#main .man {
+  padding: 0.1rem 0.1rem 0 0.1rem;
+}
+#main .brand a,
+#main .sport a,
+#main .women a,
+#main .man a {
   display: block;
 }
-#brand a img,
-#sprot a img,
-#woman a img,
-#man a img {
+#main .brand a img,
+#main .sport a img,
+#main .women a img,
+#main .man a img {
   width: 100%;
 }
