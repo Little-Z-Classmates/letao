@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘后台管理系统登录页面</title>
+    <!-- 1. 引入bootstrap的css文件 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <!-- 2. 引入字体图标库的css -->
+    <link rel="stylesheet" href="./lib/font-awesome/css/font-awesome.css">
+    <!-- 3. 引入后台自己样式 -->
+    <link rel="stylesheet/less" href="less/login.less">
+    <!-- 4. 引入一个less.js的编译器文件 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <form action="#" id="loginForm">
+        <img src="./images/1.png" alt="" class="logo">
+        <div class="input-group">
+            <span class="input-group-addon" ><i class="fa fa-user"></i> 用户名</span>
+            <input type="text" class="form-control username" placeholder="请输入用户名" value="root">
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-key"></i> 密&nbsp;&nbsp;码</span>
+            <input type="password" class="form-control password" placeholder="请输入密码" value="123456">
+        </div>
+        <div class="input-group">
+            <button type="button" class="btn btn-login">登录</button>
+        </div>
+    </form>
+    <!-- 1. 引入jQuery -->
+    <script src="lib/jquery/jquery.js"></script>
+    <!-- 2. 引入bootstrap的js -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!-- 3. 引入模板引擎 创建和渲染模板 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 4. 引入自己js -->
+    <script src="js/login.js"></script>
+</body>
+
+</html>

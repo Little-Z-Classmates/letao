@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>自己写的移动端搜索页面</title>
+  <link rel="icon" href="./images/favicon.ico">
+  <link rel="stylesheet" href="./lib/mui/css/mui.css">
+  <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+  <link rel="stylesheet/less" href="./less/search.less">
+  <script src="./lib/less/less.js"></script>
+  <style>
+    /* .search-text {
+      pointer-events: none;
+    } */
+    .delSpan {
+      z-index: 5;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 头部区域 -->
+  <header id="header">
+    <a href="javascript:history.back();" class="left">
+      <i class="fa fa-arrow-left"></i>
+    </a>
+    <h4 class="center">完整乐淘主页</h4>
+    <a href="javascript:;" class="right">
+    </a>
+  </header>
+  <!-- 主体区域 -->
+  <main id="main">
+    <!-- 搜索商品框 -->
+    <div class="search-bar">
+      <form action="">
+        <input type="search" placeholder="请输入要搜索的商品" class="input-search">
+        <button type="button" class="mui-btn mui-btn-primary btn-search">搜索</button>
+      </form>
+    </div>
+
+    <!-- 搜索历史 -->
+    <div class="history">
+      <div class="mui-card">
+        <!--页眉，放置标题-->
+        <div class="mui-card-header">
+          <span>搜索历史</span>
+          <a href="#" class="fa fa-trash btn-clear btn-remove">清空记录</a>
+        </div>
+        <!--内容区-->
+        <div class="mui-card-content">
+          <ul class="mui-table-view history-list">
+            <!-- <li class="mui-table-view-cell">历史几率 
+                        <span class="mui-badge mui-badge-primary fa fa-times"></span>
+                    </li>
+                    <li class="mui-table-view-cell">历史几率 
+                        <span class="mui-badge mui-badge-primary fa fa-times"></span>
+                    </li>
+                    <li class="mui-table-view-cell">历史几率 
+                        <span class="mui-badge mui-badge-primary fa fa-times"></span>
+                    </li> -->
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- 尾部区域 -->
+  <footer id="footer">
+    <div class="mui-row">
+      <div class="mui-col-xs-3">
+        <a href="index.html" class="active">
+          <i class="fa fa-home"></i>
+          <p>首页</p>
+        </a>
+      </div>
+      <div class="mui-col-xs-3">
+        <a href="category.html">
+          <i class="fa fa-bars"></i>
+          <p>分类</p>
+        </a>
+      </div>
+      <div class="mui-col-xs-3">
+        <a href="cart.html">
+          <i class="fa fa-shopping-cart"></i>
+          <p>购物车</p>
+        </a>
+      </div>
+      <div class="mui-col-xs-3">
+        <a href="user.html">
+          <i class="fa fa-user"></i>
+          <p>个人中心</p>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script id="search-content" type="text/html">
+    {{ if list.length > 0 }}
+    {{ each list value index }}
+      <li class="mui-table-view-cell search-text">{{ value.key }} 
+        <span class="mui-badge mui-badge-primary fa fa-times delSpan" data-index="{{ index }}"></span>
+      </li>
+    {{ /each }}
+    {{ else }}
+    <li class="mui-table-view-cell">无历史记录
+    </li>
+    {{ /if }}
+  </script>
+  <script src="./lib/fastclick.js"></script>
+  <script src="./lib/mui/js/mui.min.js"></script>
+  <script src="./lib/zepto/zepto.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/search.js"></script>
+</body>
+
+</html>

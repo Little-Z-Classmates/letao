@@ -1,0 +1,67 @@
+@import 'base.less';
+/* 这是购物车页面 */
+
+/* 主体结构 */
+#main {
+  ul {
+    .mui-navigate-right::after {
+      right: 0;
+    }
+
+    .mui-pull-left {
+      text-align: center;
+
+      input.cart-checkbox {
+        position: static;
+        text-align: center;
+
+        &::before {
+          font-size: .2rem;
+          color: hotpink;
+        }
+      }
+
+      img {
+        max-width: .8rem;
+        height: .8rem;
+      }
+    }
+
+    .mui-media-body {
+      .name {
+        white-space: normal;
+      }
+
+      .price {
+        padding: .05rem;
+
+        span {
+          color: red;
+          font-weight: 700;
+        }
+      }
+
+      .params {
+        display: flex;
+        justify-content: space-between;
+        font-size: .14rem;
+        padding: .05rem;
+      }
+    }
+  }
+}
+
+/* 订单 */
+.order {
+  display: flex;
+  justify-content: space-between;
+  padding-left: .2rem;
+  line-height: .35rem;
+  height: .35rem;
+  border-top: 1px solid #ccc;
+
+  .order-sum {
+    color: red;
+    font-weight: 700;
+  }
+}

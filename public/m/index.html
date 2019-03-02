@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 1. 添加完整的视口 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自写乐淘移动端首页</title>
+    <!-- 引入站点图标 -->
+    <link rel="icon" href="favicon.ico">
+    <!-- 引包的原则
+        1. 先引入第三方包 再引入自己的包
+        2. 如果有依赖的要先引入被依赖的包 在引入 后面包 -->
+    <!-- 1. 引入第三方的 引入MUi的css文件-->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 2. 引入字体图标库的文件 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 3. 引入自己的less文件 -->
+    <link rel="stylesheet/less" href="less/index.less">
+    <!-- 4. 引入less.js的编译器文件 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    
+    <!-- 1. 引入Mui的js文件 需要使用MUi一些JS功能 弹框 轮播图 滚动等 -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 2. 引入一个zepto 是用来给 获取元素 添加事件 发送请求之类操作 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 3. 引入一个artTemplate-web.js 创建模板 渲染数据的 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 4. 引入自己的js -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>

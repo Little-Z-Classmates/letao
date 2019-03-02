@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>自己写的移动端分类页面</title>
+  <link rel="icon" href="./images/favicon.ico">
+  <link rel="stylesheet" href="./lib/mui/css/mui.css">
+  <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+  <link rel="stylesheet/less" href="./less/category.less">
+  <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+  <!-- 头部区域 -->
+  <header id="header">
+    <!-- <a href="javascript:history.back();" class="left"> -->
+    <a href="javascript:;" class="left">
+      <i class="fa fa-arrow-left"></i>
+    </a>
+    <form action="" class="center">
+      <input type="search" placeholder="请输入要搜索的内容">
+    </form>
+    <a href="search.html" class="right">
+      <i class="fa fa-search"></i>
+    </a>
+  </header>
+  <!-- 主体区域 -->
+  <main id="main">
+    <div class="left">
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <ul class="mui-table-view">
+            <!-- 模版 -->
+            <!-- <li class="mui-table-view-cell">运动馆</li>
+            <li class="mui-table-view-cell">女士馆</li>
+            <li class="mui-table-view-cell">男士馆</li>
+            <li class="mui-table-view-cell">运动馆</li>
+            <li class="mui-table-view-cell">女士馆</li>
+            <li class="mui-table-view-cell">男士馆</li> -->
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="right">
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <div class="mui-row">
+            <!-- <div class="mui-col-xs-4">
+              <a href="#" >
+                <img src="./images/brand1.png" alt="">
+                <p>耐克</p>
+              </a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- 遮罩层 -->
+    <div class="mask">
+        <div class="loadEffect">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+    </div>
+    </div>
+  </main>
+  <!-- 尾部区域 -->
+  <footer id="footer">
+    <div class="mui-row">
+      <div class="mui-col-xs-3">
+        <a href="index.html">
+          <i class="fa fa-home"></i>
+          <p>首页</p>
+        </a>
+      </div>
+      <div class="mui-col-xs-3">
+        <a href="category.html" class="active">
+          <i class="fa fa-bars"></i>
+          <p>分类</p>
+        </a>
+      </div>
+      <div class="mui-col-xs-3">
+        <a href="cart.html">
+          <i class="fa fa-shopping-cart"></i>
+          <p>购物车</p>
+        </a>
+      </div>
+      <div class="mui-col-xs-3">
+        <a href="user.html">
+          <i class="fa fa-user"></i>
+          <p>个人中心</p>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 左侧的模版 -->
+  <script id="categoryLeftTpl" type="text/html">
+    {{ each rows value index}}
+      <li class="mui-table-view-cell {{index == 0? 'mui-badge-primary' : ''}}" data-id="{{ value.id }}">{{value.categoryName}}</li>
+    {{ /each }}
+  </script>
+  <!-- 右侧模版 -->
+  <script id="categoryRightTpl" type="text/html">
+    {{ if rows.length > 0}}
+    {{ each rows value }}
+      <div class="mui-col-xs-4">
+        <a href="#">
+          <img src="{{ value.brandLogo}}" alt="">
+          <p>{{ value.brandName }}</p>
+        </a>
+      </div>
+    {{ /each }}
+    {{ else }}
+      <p>没有数据</p>
+    {{ /if }}
+  
+  </script>
+
+  <script src="./lib/mui/js/mui.min.js"></script>
+  <script src="./lib/zepto/zepto.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/category.js"></script>
+</body>
+
+</html>

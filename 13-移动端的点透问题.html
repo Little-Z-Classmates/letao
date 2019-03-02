@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        a {
+            display: block;
+            width: 100px;
+            height: 50px;
+            background-color: #ccc;
+        }
+
+        .buy {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <a>
+        超链接
+        <div class="buy" id="buy">立即购买</div>
+    </a>
+
+    <script src="./zepto.min.js"></script>
+    <script>
+        /*  手机里面a标签是click事件有延迟
+        但是buy按钮 是tap事件 不延迟的时候
+        同时点击同一个地方 2个元素都被点到
+        先触发tap 跳转到详情页面
+        再触发a的click跳到商品列表页面 */
+        // 解决方案 不要使用click事件 或者 不要使用a链接
+
+
+        // 如果使用click全部使用click
+        $('#buy').on('click', function () {
+            //   点击buy跳转到详情页面
+            location = 'http://172.20.10.7:3000/m/detail.html?id=2';
+            $('#buy').hide();
+        });
+
+        // 如果使用tap全部使用tap
+        $('#buy').on('tap', function () {
+            //   点击buy跳转到详情页面
+            location = 'http://172.20.10.7:3000/m/detail.html?id=2';
+            $('#buy').hide();
+        });
+        $('a').on('tap', function () {
+            //   点击buy跳转到详情页面
+            location = 'http://172.20.10.7:3000/m/productlist.html?search=%E9%9E%8B&time=1550202026474#';
+            // $('#buy').hide();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+@import 'base.less';
+
+/* 商品列表主体结构 */
+#main {
+
+  .mui-content {
+    background-color: #fff;
+  }
+  /* 商品列表 */
+  .product-list {
+    .title {
+      margin-bottom: .05rem;
+      text-align: center;
+      background-color: #eeeeee;
+      line-height: .3rem;
+      font-size: .14rem;
+      a {
+        display: block;
+        color: #666;
+        &.active {
+          color: red;
+        }
+      }
+    }
+
+    .content {
+      .mui-col-xs-6 {
+        padding: .05rem;
+        text-align: center;
+        .product {
+          padding: 0 0 .1rem;
+          box-shadow: 0 0 1px #ccc;
+          img {
+            width: 100%;
+          }
+          .price {
+            span {
+              color: red;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>自己写的移动端购物车</title>
+  <link rel="icon" href="./images/favicon.ico">
+  <link rel="stylesheet" href="./lib/mui/css/mui.css">
+  <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+  <link rel="stylesheet/less" href="./less/cart.less">
+  <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+  <!-- 头部区域 -->
+  <header id="header">
+    <a href="javascript:history.back();" class="left">
+      <i class="fa fa-arrow-left"></i>
+    </a>
+    <h4 class="center">购物车</h4>
+    <a href="#" class="right">
+      <i class="fa fa-refresh"></i>
+    </a>
+  </header>
+  <!-- 主体区域 -->
+  <main id="main">
+    <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+      <div class="mui-scroll">
+        <!--数据列表-->
+        <ul class="mui-table-view cart-list">
+
+          <!-- <li class="mui-table-view-cell mui-media mui-transitioning">
+            <div class="mui-slider-right mui-disabled">
+              <a class="mui-btn mui-btn-blue">编辑</a>
+              <a class="mui-btn mui-btn-red">删除</a>
+            </div>
+
+
+            <a href="javascript:;" class="mui-navigate-right mui-slider-handle">
+              <div class="mui-pull-left">
+
+                <img class="mui-media-object" src="/mobile/images/detail.jpg">
+                <div class="mui-input-row mui-checkbox">
+                  <input class="cart-checkbox" name="checkbox1" value="Item 1" type="checkbox">
+                </div>
+              </div>
+              <div class="mui-media-body">
+                <p class="name">李宁闪击篮球鞋驭帅10镭射队尚4男韦德之道空袭中高帮队尚3.5球鞋</p>
+                <p class="price">
+                  <span>¥499.1</span>
+                  <del>¥888.1</del>
+                </p>
+                <div class="params">
+                  <div class="size">鞋码：<span>35</span></div>
+                  <div class="sum">x<span>1</span></div>
+                </div>
+              </div>
+            </a>
+          </li> -->
+
+        </ul>
+      </div>
+    </div>
+
+
+
+
+
+
+  </main>
+  <!-- 生成订单 -->
+  <section class="order">
+    <p class="order-sum">订单总额：￥<span>0.00</span></p>
+    <button type="button" class="mui-btn mui-btn-danger">生成订单</button>
+  </section>
+  <!-- 尾部区域 -->
+  <footer id="footer">
+    <div class="mui-row">
+      <div class="mui-col-xs-3">
+        <a href="index.html">
+          <i class="fa fa-home"></i>
+          <p>首页</p>
+        </a>
+      </div>
+      <div class="mui-col-xs-3">
+        <a href="category.html">
+          <i class="fa fa-bars"></i>
+          <p>分类</p>
+        </a>
+      </div>
+      <div class="mui-col-xs-3">
+        <a href="cart.html" class="active">
+          <i class="fa fa-shopping-cart"></i>
+          <p>购物车</p>
+        </a>
+      </div>
+      <div class="mui-col-xs-3">
+        <a href="user.html">
+          <i class="fa fa-user"></i>
+          <p>个人中心</p>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- 编辑弹窗信息 -->
+  <script id="productInfo" type="text/html">
+
+      <div class="mui-table-view-cell size">
+          <div>
+            <span>尺码:</span>
+              {{ each productSize value}}
+                <button type="button" class="btn-size mui-btn{{ size == value ? ' mui-btn-warning' : '' }}" data-size="{{value}}">{{value}}</button>
+              {{ /each }}
+          </div>
+        </div>
+        <div class="mui-table-view-cell quantity">
+            <span>数量：</span>
+          <div class="mui-numbox" data-numbox-step='1' data-numbox-min='1' data-numbox-max='{{productNum}}'>
+            <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+            <input class="mui-numbox-input" type="number" />
+            <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+          </div>
+          <span>剩余{{productNum}}件</span>
+        </div>
+
+  </script>
+  <!-- 购物车所有商品模版 -->
+  <script id="cart-list-tpl" type="text/html">
+    {{ each data value }}
+    <li class="mui-table-view-cell mui-media">
+        <div class="mui-slider-right mui-disabled">
+            <a class="mui-btn mui-btn-blue btn-compile" data-product-info="{{value}}">编辑</a>
+            <a class="mui-btn mui-btn-red btn-delete" data-id="{{ value.id }}">删除</a>
+          </div>
+      <a href="javascript:;" class="mui-navigate-right mui-slider-handle">
+        <div class="mui-pull-left">
+          <img class="mui-media-object" src="{{value.pic[0].picAddr}}">
+          <div class="mui-input-row mui-checkbox">
+            <input class="cart-checkbox" data-price="{{value.price}}"  data-num="{{value.num}}" name="checkbox1" value="Item 1" type="checkbox">
+          </div>
+        </div>
+        <div class="mui-media-body">
+          <p class="name">{{value.proName}}</p>
+          <p class="price">
+            <span>¥{{value.price}}</span>
+            <del>¥{{value.oldPrice}}</del>
+          </p>
+          <div class="params">
+            <div class="size">鞋码：{{value.size}}</div>
+            <div class="sum">x{{value.num}}双</div>
+          </div>
+        </div>
+      </a>
+    </li>
+  {{ /each }}
+  </script>
+  <script src="./lib/mui/js/mui.min.js"></script>
+  <script src="./lib/zepto/zepto.min.js"></script>
+  <script src="./lib/artTemplate/template-web.js"></script>
+  <script src="./js/common.js"></script>
+  <script src="./js/cart.js"></script>
+</body>
+
+</html>

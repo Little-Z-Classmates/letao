@@ -1,0 +1,223 @@
+/* 主题颜色 */
+/* 初始化代码 */
+html {
+  font-size: 26.6667vw;
+}
+body {
+  font-size: .16rem;
+  background-color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+}
+img {
+  vertical-align: middle;
+}
+/* 公共样式 */
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* 头部样式 */
+#header {
+  display: flex;
+  text-align: center;
+  background-color: #006699;
+  line-height: .45rem;
+}
+#header .left,
+#header .right {
+  width: .45rem;
+  color: #fff;
+}
+#header .left i,
+#header .right i {
+  font-size: .18rem;
+}
+#header .center {
+  flex: 1;
+  height: .45rem;
+  line-height: .45rem;
+  color: #fff;
+}
+#header .center input {
+  background-color: #fff;
+  text-align: left;
+  color: #555;
+  font-size: .14rem;
+}
+#header .center input::placeholder {
+  font-size: .14rem;
+}
+#main {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  /* 搜索商品框 */
+  /* 遮罩层 */
+}
+#main .search-bar {
+  padding: .1rem;
+}
+#main .search-bar form {
+  display: flex;
+  height: 34px;
+}
+#main .search-bar form input {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #006699;
+  text-align: left;
+  font-size: .14rem;
+  border-radius: 0.06rem 0 0 0.06rem;
+}
+#main .search-bar form button {
+  background-color: #006699;
+  border: 0 none;
+  border-radius: 0 0.06rem 0.06rem 0;
+}
+#main .mask {
+  position: absolute;
+  background-color: #ccc;
+  width: 100%;
+  height: 100%;
+  z-index: 1111;
+}
+#main .mask .loadEffect {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#main .mask .loadEffect span {
+  display: inline-block;
+  width: 0.16rem;
+  height: 0.16rem;
+  border-radius: 50%;
+  background: #006699;
+  position: absolute;
+  -webkit-animation: load 1.04s ease infinite;
+}
+@-webkit-keyframes load {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+#main .mask .loadEffect span:nth-child(1) {
+  left: 0;
+  top: 50%;
+  margin-top: -0.08rem;
+  -webkit-animation-delay: 0.13s;
+}
+#main .mask .loadEffect span:nth-child(2) {
+  left: 0.14rem;
+  top: 0.14rem;
+  -webkit-animation-delay: 0.26s;
+}
+#main .mask .loadEffect span:nth-child(3) {
+  left: 50%;
+  top: 0;
+  margin-left: -0.08rem;
+  -webkit-animation-delay: 0.39s;
+}
+#main .mask .loadEffect span:nth-child(4) {
+  top: 0.14rem;
+  right: 0.14rem;
+  -webkit-animation-delay: 0.52s;
+}
+#main .mask .loadEffect span:nth-child(5) {
+  right: 0;
+  top: 50%;
+  margin-top: -0.08rem;
+  -webkit-animation-delay: 0.65s;
+}
+#main .mask .loadEffect span:nth-child(6) {
+  right: 0.14rem;
+  bottom: 0.14rem;
+  -webkit-animation-delay: 0.78s;
+}
+#main .mask .loadEffect span:nth-child(7) {
+  bottom: 0;
+  left: 50%;
+  margin-left: -0.08rem;
+  -webkit-animation-delay: 0.91s;
+}
+#main .mask .loadEffect span:nth-child(8) {
+  bottom: 0.14rem;
+  left: 0.14rem;
+  -webkit-animation-delay: 1.04s;
+}
+/* 尾部样式 */
+#footer {
+  background-color: #006699;
+  height: .45rem;
+}
+#footer a {
+  height: .45rem;
+  display: block;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: .14rem;
+  line-height: .14rem;
+}
+#footer a.active {
+  color: orange;
+}
+#footer a.active p {
+  color: orange;
+}
+#footer a p {
+  color: #fff;
+  margin-bottom: 0;
+}
+/* 商品列表主体结构 */
+#main {
+  /* 商品列表 */
+}
+#main .mui-content {
+  background-color: #fff;
+}
+#main .product-list .title {
+  margin-bottom: .05rem;
+  text-align: center;
+  background-color: #eeeeee;
+  line-height: .3rem;
+  font-size: .14rem;
+}
+#main .product-list .title a {
+  display: block;
+  color: #666;
+}
+#main .product-list .title a.active {
+  color: red;
+}
+#main .product-list .content .mui-col-xs-6 {
+  padding: .05rem;
+  text-align: center;
+}
+#main .product-list .content .mui-col-xs-6 .product {
+  padding: 0 0 .1rem;
+  box-shadow: 0 0 1px #ccc;
+}
+#main .product-list .content .mui-col-xs-6 .product img {
+  width: 100%;
+}
+#main .product-list .content .mui-col-xs-6 .product .price span {
+  color: red;
+  font-weight: 700;
+}

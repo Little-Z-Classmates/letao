@@ -1,0 +1,67 @@
+@import 'base.less';
+
+/* 导航条区域 */
+#nav {
+  padding: .1rem;
+  a {
+    display: block;
+    img {
+      width: 100%;
+    }
+  }
+}
+/* 广告区域 */
+#banner {
+  padding: 0 10px;
+  .left {
+    a {
+      display: block;
+      img {
+        width: 50%;
+        height: 1.2rem;
+      }
+    }
+  }
+  .right {
+    a {
+      display: block;
+      img {
+        width: 100%;
+        height: 2.4rem;
+      }
+    }
+  }
+}
+/* 品牌专区,运动专区,男士专区公共样式 */
+#brand,#sport,#man {
+  padding: .1rem;
+  a {
+    display: block;
+    img {
+      width: 100%;
+    }
+  }
+}
+/* 运动专区 */
+#sport {
+  .content{
+    display: flex;
+    flex-wrap: wrap;
+    > div {
+    padding: 5px;
+     &:nth-of-type(odd){
+      padding-left: 0;
+    }
+     &:nth-of-type(even){
+      padding-right: 0;
+    }
+    a {
+      box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      button {
+        margin-bottom: .1rem;
+      }
+     }  
+    }
+  }
+}

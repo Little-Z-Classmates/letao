@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #box1 {
+      background-color: red;
+    width: 400px;
+    height: 400px;
+    }
+  #box2 {
+    background-color: pink;
+    width: 200px;
+    height: 200px;
+  }
+  span {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: green;
+  }
+  </style>
+</head>
+<body>
+  <div id="box1">
+  <div id="box2">
+    <span class="text">1</span>
+    <span class="text">2</span>
+    <span class="text">3</span>
+  </div>
+</div>
+</body>
+</html>
+<script src="./lib/mui/js/mui.min.js"></script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script>
+  $('#box2').on('tap', function () {
+    console.log('我是粉色');
+    // alert('我是ul')
+  })
+  $('#box1').on('tap', function () {
+    console.log('我是红色');
+    // alert('我是ul')
+  })
+  $('#box2').on('tap','.text', function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+    console.log('我是绿色');
+    // alert('我是ul')
+  })
+
+
+
+  // $('.text').on('tap', function (e) {
+  //   e.stopPropagation();
+  //   console.log('我是li');
+  // })
+</script>

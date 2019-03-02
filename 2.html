@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- history.back() 这个函数如果前面的页面没完全加载完毕是无法返回的 -->
+    <a href="#" class="btn-back">返回</a>
+    <script>
+        // 1. 2.html页面知道返回去哪里  返回到url参数的值的 这个url
+        // 使用网上封装好的正则的方式完成url参数的值的获取
+        function getQueryString(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                // 默认使用encodeURI去对中文进行的加密  使用decodeURI解密
+                return decodeURI(r[2]);
+            }
+            return null;
+        }
+        var returnUrl  = getQueryString('redirectURL');
+        console.log(returnUrl);
+        // 点击返回按钮的时候跳转到这个returnUrl的页面
+        var btnBack = document.querySelector('.btn-back');
+        btnBack.addEventListener('click',function (){
+            // 点击了返回按钮 跳转到我要返回的页面的url  返回到一个指定的页面 不管你从哪里 你只要告诉我你要返回回哪里即可
+            location = returnUrl;
+        });
+    </script>
+</body>
+
+</html>

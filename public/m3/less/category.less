@@ -1,0 +1,33 @@
+@import 'base.less';
+/* 分类的主体区域 */
+#main {
+  display: flex;
+  background-color: #cccccc;
+  .mui-scrollbar-indicator {
+    background-color: rgba(255, 0, 0, .39804);
+  }
+  .left {
+    position: relative;
+    width: .8rem;
+    .mui-table-view-cell:after {
+      left: 0;
+    }
+  }
+  .right{
+    flex: 1;
+    position: relative;
+    .mui-scroll {
+      padding: .1rem;
+    }
+    a {
+      display: block;
+      background-color: #fff;
+      text-align: center;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+ 
+}

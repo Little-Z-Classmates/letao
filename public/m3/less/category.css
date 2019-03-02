@@ -1,0 +1,119 @@
+/* 主题颜色 */
+/* 初始化代码 */
+html {
+  font-size: 26.6667vw;
+}
+body {
+  font-size: .16rem;
+  background-color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+}
+img {
+  vertical-align: middle;
+}
+/* 公共样式 */
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* 头部样式 */
+#header {
+  display: flex;
+  text-align: center;
+  background-color: #006699;
+  line-height: .45rem;
+}
+#header .left,
+#header .right {
+  width: .45rem;
+  color: #fff;
+}
+#header .left i,
+#header .right i {
+  font-size: .18rem;
+}
+#header .center {
+  flex: 1;
+  height: .45rem;
+  line-height: .45rem;
+  color: #fff;
+}
+#header .center input {
+  background-color: #fff;
+  text-align: left;
+  color: #555;
+  font-size: .14rem;
+}
+#header .center input::placeholder {
+  font-size: .14rem;
+}
+#main {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+/* 尾部样式 */
+#footer {
+  background-color: #006699;
+  height: .45rem;
+}
+#footer a {
+  height: .45rem;
+  display: block;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: .14rem;
+  line-height: .14rem;
+}
+#footer a.active {
+  color: orange;
+}
+#footer a.active p {
+  color: orange;
+}
+#footer a p {
+  color: #fff;
+  margin-bottom: 0;
+}
+/* 分类的主体区域 */
+#main {
+  display: flex;
+  background-color: #cccccc;
+}
+#main .mui-scrollbar-indicator {
+  background-color: rgba(255, 0, 0, 0.39804);
+}
+#main .left {
+  position: relative;
+  width: .8rem;
+}
+#main .left .mui-table-view-cell:after {
+  left: 0;
+}
+#main .right {
+  flex: 1;
+  position: relative;
+}
+#main .right .mui-scroll {
+  padding: .1rem;
+}
+#main .right a {
+  display: block;
+  background-color: #fff;
+  text-align: center;
+}
+#main .right a img {
+  width: 100%;
+}

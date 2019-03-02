@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 模板引擎的函数 第一次参数是模板id 第二个参数是数据对象 注意 这个定义函数叫形参
+        function template(id,obj){
+          // 模板引擎里面 需要的是实参的值   obj = data 相当于会把实参赋值给obj   obj = {rows:[1,2,3,4]}
+          // 模板引擎不考虑你对象名 只考虑里面的数据
+          for(var i = 0 ; obj.rows.length;i++){
+
+          }
+        }    
+
+        var data = {rows:[1,2,3,4]};
+        // 上面是有名字的对象 data对象名
+        template('id',data);
+        // 这种叫匿名对象 没有名字的对象
+        template('id',{rows:[1,2,3,4]});
+        // window.console.log('1121');
+        console.log('1121');
+    </script>
+</body>
+</html>

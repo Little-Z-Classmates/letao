@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .a {
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .b {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .log {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a">a</div>
+    <div class="b">b</div>
+    <div class="log"></div>
+
+    <script src="./zepto.min.js"></script>
+    <script>
+        // 100ms的时候触发了 隐藏了b 并且打印了b被点击了
+        $('.b').on('tap', function () {
+            console.log('b');
+            $(this).hide();
+            $('.log').append('b被点击了')
+        })
+        // click比tap要慢  300ms之后才捕获有没有点击到a这个位置 有 就会触发a事件
+        $('.a').on('click', function () {
+            $('.log').append('a被点击了')
+        });
+
+
+        //   如果2个都是tap都很快就不会有点透
+        $('.b').on('tap', function () {
+            console.log('b');
+            $(this).hide();
+            $('.log').append('b被点击了')
+        })
+
+        $('.a').on('tap', function () {
+            $('.log').append('a被点击了')
+        });
+        // 两个都是click都很慢也不会
+        $('.b').on('click', function () {
+            console.log('b');
+            $(this).hide();
+            $('.log').append('b被点击了')
+        })
+
+        $('.a').on('click', function () {
+            $('.log').append('a被点击了')
+        });
+        //  一定要满足1快 1慢  快的tap在上面 点击会隐藏 才会触发后面慢的click
+        $('.b').on('tap', function () {
+            console.log('b');
+            $(this).hide();
+            $('.log').append('b被点击了')
+        })
+
+        $('.a').on('click', function () {
+            $('.log').append('a被点击了')
+        });
+    </script>
+</body>
+
+</html>
