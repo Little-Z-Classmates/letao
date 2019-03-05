@@ -6,7 +6,7 @@
     <!-- 1. 添加完整的视口 -->
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>自写乐淘移动端分类</title>
+    <title>自写乐淘移动端首页</title>
     <!-- 引入站点图标 -->
     <link rel="icon" href="favicon.ico">
     <!-- 引包的原则
@@ -17,7 +17,7 @@
     <!-- 2. 引入字体图标库的文件 -->
     <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
     <!-- 3. 引入自己的less文件 -->
-    <link rel="stylesheet/less" href="less/category.less">
+    <link rel="stylesheet/less" href="less/category.css">
     <!-- 4. 引入less.js的编译器文件 -->
     <script src="lib/less/less.js"></script>
 </head>
@@ -25,717 +25,63 @@
 <body>
     <!-- 头部区域 -->
     <header id="header">
-        <!-- javascript:history.back() 调用历史记录的API返回上一页  如果为了方便直接写 a标签里面直接写JS代码 点击a标签就会执行JS代码-->
-        <a href="javascript:history.back();" class="left fa fa-arrow-left"></a>
-        <form action="#" class="center">
+        <div class="left">
+            <i class="fa fa-arrow-left"></i>
+        </div>
+        <div class="center">
             <input type="search" placeholder="请输入要搜索的商品">
-        </form>
-        <a href="search.html" class="right fa fa-search"></a>
+        </div>
+        <div class="right">
+                <a class="fa fa-search" href="search.html"></a>
+        </div>
     </header>
-    <!-- 主体区域 -->
+    <!-- 主题区域 -->
     <main id="main">
         <div class="category-left">
-            <!-- 左边需要滚动就给左边加 -->
             <div class="mui-scroll-wrapper">
                 <div class="mui-scroll">
-                    <!--这里放置真实显示的DOM内容-->
                     <ul class="mui-table-view">
-                        <li class="mui-table-view-cell">女士馆</li>
-                        <li class="mui-table-view-cell">男士馆</li>
-                        <li class="mui-table-view-cell">麻将馆</li>
-                        <li class="mui-table-view-cell">女士馆</li>
-                        <li class="mui-table-view-cell">男士馆</li>
-                        <li class="mui-table-view-cell">麻将馆</li>
-                        <li class="mui-table-view-cell">女士馆</li>
-                        <li class="mui-table-view-cell">男士馆</li>
-                        <li class="mui-table-view-cell">麻将馆</li>
-                        <li class="mui-table-view-cell">女士馆</li>
-                        <li class="mui-table-view-cell">男士馆</li>
-                        <li class="mui-table-view-cell">麻将馆</li>
-                        <li class="mui-table-view-cell">女士馆</li>
-                        <li class="mui-table-view-cell">男士馆</li>
-                        <li class="mui-table-view-cell">麻将馆</li>
-                        <li class="mui-table-view-cell">女士馆</li>
-                        <li class="mui-table-view-cell">男士馆</li>
-                        <li class="mui-table-view-cell">麻将馆</li>
-                        <li class="mui-table-view-cell">女士馆</li>
-                        <li class="mui-table-view-cell">男士馆</li>
-                        <li class="mui-table-view-cell">麻将馆</li>
-                        <li class="mui-table-view-cell">女士馆</li>
-                        <li class="mui-table-view-cell">男士馆</li>
-                        <li class="mui-table-view-cell">麻将馆</li>
-                        <li class="mui-table-view-cell">女士馆</li>
-                        <li class="mui-table-view-cell">男士馆</li>
-                        <li class="mui-table-view-cell">麻将馆</li>
-                        <li class="mui-table-view-cell">女士馆</li>
-                        <li class="mui-table-view-cell">男士馆</li>
-                        <li class="mui-table-view-cell">麻将馆</li>
-                        <li class="mui-table-view-cell">女士馆</li>
-                        <li class="mui-table-view-cell">男士馆</li>
-                        <li class="mui-table-view-cell">麻将馆</li>
-                        <li class="mui-table-view-cell">女士馆</li>
-                        <li class="mui-table-view-cell">男士馆</li>
-                        <li class="mui-table-view-cell">麻将馆</li>
-                        <li class="mui-table-view-cell">女士馆</li>
-                        <li class="mui-table-view-cell">男士馆</li>
-                        <li class="mui-table-view-cell">麻将馆</li>
-                        <li class="mui-table-view-cell">女士馆</li>
-                        <li class="mui-table-view-cell">男士馆</li>
-                        <li class="mui-table-view-cell">麻将馆</li>
                     </ul>
                 </div>
             </div>
-
         </div>
+
         <div class="category-right">
-            <!-- 右边需要就给右边加 -->
-            <div class="mui-scroll-wrapper">
-                <div class="mui-scroll">
-                    <!--这里放置真实显示的DOM内容-->
-                    <div class="mui-row">
-                        <!-- .mui-col-xs-4*5>a[href="#"]>img[src="images/brand$.png"]+p{耐克} -->
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand1.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand2.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand3.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand4.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                        <div class="mui-col-xs-4">
-                            <a href="#">
-                                <img src="images/brand5.png" alt="">
-                                <p>耐克</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="mui-row">
+                <!-- .mui-col-xs-4*5>a[href="#"]>img[src="/mobile/images/brand$.png"]+p{耐克} -->
             </div>
+        </div>
 
-        </div>
-        <!-- 遮罩层容器 -->
-        <div class="mask">
-            <div class="spinner">
-                <div class="spinner-container container1">
-                    <div class="circle1"></div>
-                    <div class="circle2"></div>
-                    <div class="circle3"></div>
-                    <div class="circle4"></div>
-                </div>
-                <div class="spinner-container container2">
-                    <div class="circle1"></div>
-                    <div class="circle2"></div>
-                    <div class="circle3"></div>
-                    <div class="circle4"></div>
-                </div>
-                <div class="spinner-container container3">
-                    <div class="circle1"></div>
-                    <div class="circle2"></div>
-                    <div class="circle3"></div>
-                    <div class="circle4"></div>
-                </div>
-            </div>
-        </div>
     </main>
-
     <!-- 底部区域 -->
     <footer id="footer">
         <div class="mui-row">
             <!-- .mui-col-xs-3*4>a[href="index.html"]>i.fa.fa-home+span{首页} -->
-            <div class="mui-col-xs-3"><a href="index.html"><i class="fa fa-home"></i><span>首页</span></a></div>
-            <div class="mui-col-xs-3"><a href="category.html" class="active"><i class="fa fa-bars"></i><span>分类</span></a></div>
+            <div class="mui-col-xs-3"><a href="index.html" class="active"><i class="fa fa-home"></i><span>首页</span></a></div>
+            <div class="mui-col-xs-3"><a href="category.html"><i class="fa fa-bars"></i><span>分类</span></a></div>
             <div class="mui-col-xs-3"><a href="cart.html"><i class="fa fa-shopping-cart"></i><span>购物车</span></a></div>
             <div class="mui-col-xs-3"><a href="user.html"><i class="fa fa-user"></i><span>个人中心</span></a></div>
         </div>
     </footer>
-    <!-- 创建一级分类的模板 模板id一般使用tpl结尾  如果不设置type会当js解析 -->
-    <script id="categoryLeftTpl" type="text/html">
-        <!-- 由于数据是数组 需要遍历生成多个li 使用模板遍历写法 -->
-        <!-- target目标 要遍历的目标数组 传人的数据对象里面的数组  当前数据里面数组名是rows 这里写rows
-        value 遍历出来的数组中的每个元素
-        index 遍历的数组的索引从0开始 -->
-        {{each rows value index}}
-            <!-- value是循环的每个值 是一个对象 取对象里面的属性 -->
-            <!-- data-id="{{value.id}}" 给li添加一个自定义属性  值就是当前的value的id -->
-            <!-- {{index == 0 ? 'mui-badge-success' : ''}} 判断当前索引是否等于0  如果等于0表示是第一个第一个就添加一个背景色类名 如果不是第一个就不添加 设置为空 -->
-            <li class="mui-table-view-cell {{index == 0 ? 'mui-badge-success' : ''}}" data-id="{{value.id}}">{{value.categoryName}}</li>
-        {{/each}}
+
+    <script type="text/html" id="tpl-left">
+        {{ each list value key }}
+        <li class="mui-table-view-cell {{ key == 0 ? 'active' : ''}} " data-id="{{value.id}}">{{ value.categoryName }}</li>
+        {{ /each }}
     </script>
-    <!-- 创建一个二级分类的模板 -->
-    <script id="categoryRightTpl" type="text/html">
-        <!-- 判断模板数据长度大于0 就遍历 -->
-        {{if rows.length > 0}}
-            <!-- index没用到可以省略不写 -->
-            {{each rows value}}
-            <div class="mui-col-xs-4">
+
+    <script type="text/html" id="tpl-right">
+        {{ each list value key }}
+        <div class="mui-col-xs-4">
                 <a href="#">
-                    <!-- 使用图片的地址 -->
-                    <img src="{{value.brandLogo}}" alt="">
-                    <!-- value遍历对象  品牌名称 -->
-                    <p>{{value.brandName}}</p>
+                    <img src="{{ value.brandLogo }}" alt="">
+                    <p>{{ value.brandName }}</p>
                 </a>
             </div>
-            {{/each}}
-        {{else}}
-            <p>没有数据！</p>
-        {{/if}}
+        {{ /each }}
     </script>
+
+    <script type="text/html" id="tpl-right"></script>
     <!-- 1. 引入Mui的js文件 需要使用MUi一些JS功能 弹框 轮播图 滚动等 -->
     <script src="lib/mui/js/mui.js"></script>
     <!-- 2. 引入一个zepto 是用来给 获取元素 添加事件 发送请求之类操作 -->
@@ -743,7 +89,7 @@
     <!-- 3. 引入一个artTemplate-web.js 创建模板 渲染数据的 -->
     <script src="lib/artTemplate/template-web.js"></script>
     <!-- 4. 引入自己的js -->
-    <script src="js/category.js"></script>
+    <script src="js/categoty.js"></script>
 </body>
 
 </html>

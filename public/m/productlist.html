@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 1. 设置视口 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自己写乐淘移动端商品列表</title>
+    <!-- 1. 引入MUI的CSS文件 使用这个没有压缩 mui.css带了rem单位 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 2. 引入fontawesome字体图标库的css文件 提供页面中字体图标-->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 4. 如果想使用swiper轮播图 因为swiper的css-->
+    <!-- <link rel="stylesheet" href="./lib/swiper/css/swiper.css"> -->
+    <!-- 3. 引入自己的css文件 -->
+    <link rel="stylesheet" href="./less/productlist.css">
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="left">
+            <a href="#" class="fa fa-arrow-left"></a>
+        </div>
+        <div class="center">
+            <h4>商品列表</h4>
+        </div>
+        <div class="right">
+
+        </div>
+    </header>
+
+    <!-- 主体区域 -->
+    <main id="main">
+        <!-- 搜索表单 -->
+        <div class="search-form">
+            <form action="#">
+                <input type="search" placeholder="请输入要搜索的商品" class="input-search">
+                <button type="button" class="mui-btn mui-btn-primary btn-search">搜索</button>
+            </form>
+        </div>
+        <div class="mui-scroll-wrapper" id="pullrefresh">
+            <div class="mui-scroll" >
+                <!--这里放置真实显示的DOM内容-->
+                <!-- 商品列表 -->
+                <div class="product-list">
+                    <div class="mui-card">
+                        <!--页眉，放置标题-->
+                        <div class="mui-card-header">
+
+                            <!-- .mui-col-xs-3*4>a[href="#"]{上架时间}>i.fa.fa-angle-down -->
+                            <a href="#" class="colorActive" data-sort="2">上架时间<i class="fa fa-angle-down "></i></a>
+                            <a href="#" data-sort="2" data-type="price">价格<i class="fa fa-angle-down"></i></a>
+                            <a href="#" data-sort="2" data-type="num">销量<i class="fa fa-angle-down"></i></a>
+                            <a href="#" data-sort="2">折扣<i class="fa fa-angle-down"></i></a>
+
+                        </div>
+                        <!--内容区-->
+                        <div class="mui-card-content">
+                            <div class="mui-row" id="contentInfo">
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="mui-row">
+            <!-- .mui-col-xs-3*4>a[href="index.html"]>i.fa.fa-home+span{首页} -->
+            <div class="mui-col-xs-3"><a href="index.html" class="active"><i class="fa fa-home"></i><span>首页</span></a></div>
+            <div class="mui-col-xs-3"><a href="category.html"><i class="fa fa-bars"></i><span>分类</span></a></div>
+            <div class="mui-col-xs-3"><a href="cart.html"><i class="fa fa-shopping-cart"></i><span>购物车</span></a></div>
+            <div class="mui-col-xs-3"><a href="user.html"><i class="fa fa-user"></i><span>个人中心</span></a></div>
+        </div>
+    </footer>
+
+    <script type="text/html" id="contentTpl">
+        {{ each list value key }}
+        <div class="mui-col-xs-6">
+            <!-- 商品容器 -->
+            <div class="product">
+                <img src="{{ value.pic[0].picAddr }}" alt="" class="product-img">
+                <p class="product-name">
+                        {{ value.proName}}
+                </p>
+                <p class="product-price">
+                    <span>￥{{ value.price }}</span>
+                    <del>￥{{ value.oldPrice }}</del>
+                </p>
+                <button type="button" class="mui-btn mui-btn-primary product-buy">立即购买{{value.num}}</button>
+            </div>
+        </div>
+        {{ /each }}
+    </script>
+    <!-- 1. 引入MUI的js文件 -->
+    <script src="./lib/mui/js/mui.js"></script>
+    <!-- 2. 引入zepto 获取元素 发送请求 和jq一样的功能适用移动端-->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 3. 有请求使用到模板 引入模板引擎 template-web.js-->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 4. 引入swiper的js -->
+    <!-- <script src="./lib/swiper/js/swiper.js"></script> -->
+    <!-- 5. 引入自己的js -->
+    <script src="./js/productlist.js"></script>
+</body>
+
+</html>

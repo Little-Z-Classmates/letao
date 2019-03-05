@@ -1,0 +1,131 @@
+html {
+  font-size: 26.6667vw;
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+body {
+  font-size: .14rem;
+  height: 100%;
+  padding: .45rem 0;
+}
+img {
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+#header {
+  background: #006699;
+  display: flex;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+#header .left {
+  width: 0.45rem;
+  height: 0.45rem;
+}
+#header .center {
+  flex: 1;
+  text-align: center;
+}
+#header .center h4 {
+  line-height: .45rem;
+  font-weight: normal;
+}
+#header .right {
+  width: 0.45rem;
+  height: 0.45rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .right i {
+  font-size: .20rem;
+}
+#footer {
+  background-color: #006699;
+  height: .45rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  z-index: 100;
+}
+#footer a {
+  color: #fff;
+}
+#footer .mui-row {
+  height: 100%;
+}
+#footer .mui-row > div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer .mui-row > div a {
+  margin-top: 0.04rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#header .left {
+  text-align: center;
+}
+#header .left i {
+  line-height: .45rem;
+  font-size: .16rem;
+}
+#header .center {
+  height: .45rem;
+  display: flex;
+  align-items: center;
+}
+#header .center input {
+  background-color: #fff;
+  color: black;
+  margin: 0;
+  text-align: left;
+  font-size: 0.14rem;
+}
+#header .right a {
+  color: #fff;
+  font-size: .18rem;
+}
+#main {
+  height: 100%;
+  display: flex;
+  background-color: #ccc;
+}
+#main .category-left {
+  position: relative;
+  width: .8rem;
+}
+#main .category-left ul li.active {
+  background-color: #ccc;
+}
+#main .category-left ul .mui-table-view-cell:after {
+  left: 0;
+}
+#main .category-right {
+  flex: 1;
+  padding: .1rem;
+}
+#main .category-right a {
+  display: block;
+  text-align: center;
+  background-color: #fff;
+}
+#main .category-right a img {
+  width: 100%;
+}

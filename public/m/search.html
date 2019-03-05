@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 1. 设置视口 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自己写乐淘移动端搜索页面</title>
+    <!-- 1. 引入MUI的CSS文件 使用这个没有压缩 mui.css带了rem单位 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 2. 引入fontawesome字体图标库的css文件 提供页面中字体图标-->
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <!-- 3. 引入自己的css文件 -->
+    <link rel="stylesheet" href="./less/search.css">
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="left">
+            <a href="#" class="fa fa-arrow-left"></a>
+        </div>
+        <div class="center">
+            <h4>乐淘搜索</h4>
+        </div>
+        <div class="right">
+
+        </div>
+    </header>
+
+    <!-- 主体区域 -->
+    <main id="main">
+        <!-- 搜索表单 -->
+        <div class="search-form">
+            <form action="#">
+                <input type="search" placeholder="请输入要搜索的商品" class="input-search">
+                <button type="button" class="mui-btn mui-btn-primary btn-search">搜索</button>
+            </form>
+        </div>
+        <!-- 搜索历史 -->
+        <div class="search-history">
+            <!-- 使用MUI的卡片组件 -->
+            <div class="mui-card">
+                <!--页眉，放置标题-->
+                <div class="mui-card-header">
+                    <span>搜索历史</span>
+                    <a href="#" class="fa fa-trash">清空记录</a>
+                </div>
+                <!--内容区-->
+                <div class="mui-card-content">
+                    <!-- MUi数字角标的列表 -->
+                    <ul class="mui-table-view">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <div class="mui-row">
+            <!-- .mui-col-xs-3*4>a[href="index.html"]>i.fa.fa-home+span{首页} -->
+            <div class="mui-col-xs-3"><a href="index.html" class="active"><i class="fa fa-home"></i><span>首页</span></a></div>
+            <div class="mui-col-xs-3"><a href="category.html"><i class="fa fa-bars"></i><span>分类</span></a></div>
+            <div class="mui-col-xs-3"><a href="cart.html"><i class="fa fa-shopping-cart"></i><span>购物车</span></a></div>
+            <div class="mui-col-xs-3"><a href="user.html"><i class="fa fa-user"></i><span>个人中心</span></a></div>
+        </div>
+    </footer>
+
+    <script type="text/html" id="tpl_hisinfo">
+        {{ each list value key }}
+        <li class="mui-table-view-cell" >{{ value.info }}
+                <span class="mui-badge fa fa-close" data-key="{{ value.id }}"></span>
+        </li>
+        {{ /each }}
+    </script>
+
+    <!-- 1. 引入MUI的js文件 -->
+    <script src="./lib/mui/js/mui.js"></script>
+    <!-- 2. 引入zepto 获取元素 发送请求 和jq一样的功能适用移动端-->
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <!-- 3. 有请求使用到模板 引入模板引擎 template-web.js-->
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <!-- 5. 引入自己的js -->
+    <script src="./js/search.js"></script>
+</body>
+
+</html>

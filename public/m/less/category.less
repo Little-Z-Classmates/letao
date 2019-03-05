@@ -1,0 +1,62 @@
+@import "base.less";
+
+#header{
+    .left{
+        text-align: center;
+        i{  
+            line-height:  .45rem;
+            font-size: .16rem;
+        }
+    }
+    .center{
+        height: .45rem;
+        display: flex;
+        align-items: center;
+        input{
+            background-color: #fff;
+            color: black;
+            margin: 0; 
+            text-align: left;
+            font-size: 0.14rem;
+        }
+    }
+    .right{
+        a{
+            color: #fff;
+            font-size: .18rem;
+        }
+    }
+}
+
+#main{
+    height: 100%;
+    display: flex;
+    background-color: #ccc;
+    .category-left{
+        position: relative;
+        width: .8rem;
+        ul{
+            li{
+                &.active{
+                    background-color: #ccc;
+                }
+            }
+            .mui-table-view-cell:after{
+                // 默认线有一点距离 去掉设置left:0
+                left: 0;
+            }
+        }
+    }
+    .category-right{
+        flex: 1;
+        padding: .1rem;
+        a{
+            display: block;
+            text-align: center;
+            background-color: #fff;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

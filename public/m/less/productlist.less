@@ -1,0 +1,95 @@
+@import 'base.less';
+body{
+    padding: 1.01rem  0 .45rem 0 ;
+}
+#header{
+    .left{
+        text-align: center;
+        a{  
+            color: #fff;
+            line-height:  .45rem;
+            font-size: .16rem;
+        }
+    }
+}
+
+/* 商品列表的主体样式 */
+#main {
+    .colorActive{
+       color: red !important;
+    }
+    height: 100%;
+    position: relative;
+    .search-form {
+        padding: .1rem;
+        position: fixed;
+        width: 100%;
+        top: .45rem;
+        form {
+            display: flex;
+
+            input {
+                flex: 1;
+                height: .36rem;
+                border: 1px solid @main-color;
+                background-color: #fff;
+                text-align: left;
+                font-size: .14rem;
+                border-radius: .06rem 0 0 .06rem;
+                margin-bottom: 0;
+            }
+
+            button {
+                width: .6rem;
+                height: .36rem;
+                background-color: @main-color;
+                border-color: @main-color;
+                border-radius: 0 .06rem .06rem 0;
+            }
+        }
+    }
+    .product-list {
+
+        // 卡片标题
+        .mui-card-header {
+
+            a {
+                font-size: .14rem;
+                color: #666;
+                text-align: center;
+            }
+        }
+        // .mui-card-header:after, .mui-card-footer:before{
+        //         height: 0
+        // }
+        // 卡片内容
+        .mui-card-content {
+            .mui-col-xs-6{
+                // border-bottom: 1px solid #ccc;
+                &:nth-child(odd){
+                    box-shadow: -1px -1px 0px 0px #ccc inset;
+                }
+                &:nth-child(even){
+                    box-shadow: 0px -1px 0px 0px #ccc inset;
+                }
+                
+            }
+            .product {
+                text-align: center;
+                padding:.1rem .05rem;
+                .product-img {
+                    width: 100%;
+                }
+
+                .product-name {
+                    overflow: hidden; // 隐藏溢出部分
+                    text-overflow: ellipsis; //溢出用省略号显示
+                    display: -webkit-box; //将对象作为弹性伸缩盒子模型显示
+                    -webkit-box-orient: vertical; //从上到下垂直排列子元素（设置伸缩盒子的子元素排列方式）
+                    -webkit-line-clamp: 2; //这个属性不是css的规范属性，需要组合上面两个属性，表示显示的行数。
+                }
+            }
+
+        }
+    }
+}

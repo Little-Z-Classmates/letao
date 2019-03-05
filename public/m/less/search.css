@@ -1,0 +1,146 @@
+html {
+  font-size: 26.6667vw;
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+body {
+  font-size: .14rem;
+  height: 100%;
+  padding: .45rem 0;
+}
+img {
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+#header {
+  background: #006699;
+  display: flex;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+#header .left {
+  width: 0.45rem;
+  height: 0.45rem;
+}
+#header .center {
+  flex: 1;
+  text-align: center;
+}
+#header .center h4 {
+  line-height: .45rem;
+  font-weight: normal;
+}
+#header .right {
+  width: 0.45rem;
+  height: 0.45rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .right i {
+  font-size: .20rem;
+}
+#footer {
+  background-color: #006699;
+  height: .45rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  z-index: 100;
+}
+#footer a {
+  color: #fff;
+}
+#footer .mui-row {
+  height: 100%;
+}
+#footer .mui-row > div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer .mui-row > div a {
+  margin-top: 0.04rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#header .left {
+  text-align: center;
+}
+#header .left a {
+  color: #fff;
+  line-height: .45rem;
+  font-size: .16rem;
+}
+/* 搜索页面的主体样式 */
+#main {
+  background-color: #fff;
+  /* 搜索表单样式 */
+  /* 搜索历史的样式 */
+}
+#main .search-form {
+  padding: .1rem;
+}
+#main .search-form form {
+  display: flex;
+}
+#main .search-form form input {
+  flex: 1;
+  height: .36rem;
+  border: 1px solid #006699;
+  background-color: #fff;
+  text-align: left;
+  font-size: .14rem;
+  border-radius: .06rem 0 0 .06rem;
+  margin-bottom: 0;
+}
+#main .search-form form button {
+  width: .6rem;
+  height: .36rem;
+  background-color: #006699;
+  border-color: #006699;
+  border-radius: 0 .06rem .06rem 0;
+}
+#main .search-history .title {
+  padding: .1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 2px #666;
+  border-radius: .06rem .06rem 0 0;
+}
+#main .search-history .title a {
+  color: #666;
+}
+#main .search-history .content {
+  box-shadow: 0px 0px 2px #666;
+  border-radius: 0 0 .06rem .06rem;
+}
+#main .search-history .content .mui-table-view-cell:after {
+  left: 0;
+}
+#main .search-history .mui-card-header span {
+  font-size: .14rem;
+}
+#main .search-history .mui-card-header a {
+  font-size: .14rem;
+  color: #666;
+}
+#main .search-history .mui-card-header .mui-table-view-cell:after {
+  left: 0;
+}
